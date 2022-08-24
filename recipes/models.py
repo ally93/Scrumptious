@@ -16,3 +16,17 @@ class Recipe(models.Model):
 
 # update the model/ create the model
 # makemigrations
+
+# measure model
+class Measure(models.Model):
+    name = models.CharField(max_length=30, unique=True)
+    abbreviation = models.CharField(max_length=10, unique=True)
+
+
+# fooditem model
+
+
+# ingredient model
+
+
+# step model
