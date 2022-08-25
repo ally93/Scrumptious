@@ -54,6 +54,9 @@ class Ingredient(models.Model):
 
 
 # # step model
-# class Step(models.Model):
-#     food_items = models.ManyToManyField("FoodItem", null=True, blank=True)
-
+class Step(models.Model):
+    recipe = models.ForeignKey(
+        "Recipe", related_name="steps", on_delete=models.CASCADE
+    )
+    order = models.PositiveSmallIntegerField()
+    directions = models.CharField(max_length=300)
