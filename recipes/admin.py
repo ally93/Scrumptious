@@ -1,9 +1,8 @@
 from django.contrib import admin
+from recipes.models import Recipe, Measure, FoodItem, Ingredient
 
-from recipes.models import Recipe
-
-from recipes.models import Measure
-
-admin.site.register(Recipe)
 # Register your models here.
+admin.site.register(Recipe)
 admin.site.register(Measure)
+admin.site.register(FoodItem)
+admin.site.register(Ingredient)
