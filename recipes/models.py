@@ -26,7 +26,7 @@ class Measure(models.Model):
         return self.name
 
 
-# fooditem model -unique=True means there r no dupes in the admin
+# fooditem model -unique=True means there r no dupes in the admin.py
 class FoodItem(models.Model):
     name = models.CharField(max_length=100, unique=True)
 
@@ -60,3 +60,4 @@ class Step(models.Model):
     )
     order = models.PositiveSmallIntegerField()
     directions = models.CharField(max_length=300)
+    food_items = models.ManyToManyField("FoodItem", blank=True)
