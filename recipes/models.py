@@ -42,7 +42,7 @@ class Ingredient(models.Model):
     )
 
     def __str__(self):
-        return str(self.food) + " " + str(self.amount) + " " + str(self.measure)
+        return str(self.amount) + " " + self.measure.name + " " + self.food.name
 
 
 class Step(models.Model):
