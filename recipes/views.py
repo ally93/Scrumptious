@@ -3,6 +3,7 @@ from django.urls import reverse_lazy
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from recipes.models import Recipe
 
 from recipes.forms import RatingForm
 
@@ -31,6 +32,7 @@ class RecipeUpdateView(UpdateView):
 class RecipeListView(ListView):
     model = Recipe
     template_name = "recipes/list.html"
+    paginate_by = 2
 
 
 class RecipeDetailView(DetailView):
